@@ -13,3 +13,22 @@ The Flight Booking Automation project aims to automate the process of booking fl
 * Payment Processing: Completes the payment process by entering credit card details, including card number, expiration date, and CVV.
 * Confirmation: Confirms successful booking and provides necessary information for further steps.
 
+# Installation
+1. Clone the repository:
+   git clone https://github.com/your_username/flight-booking-automation.git
+
+2.Navigate to the project directory:
+  cd flight-booking-automation
+
+3. Install dependencies:
+   pip install -r requirements.txt
+
+4. Run the script:
+   python flight_booking_automation.py
+Follow the prompts and provide necessary inputs for the script to automate the flight booking process.
+
+# Technologies Used
+* Python: Programming language used for automation and scripting.
+* Selenium: Web automation framework used for interacting with web elements and automating browser actions.
+* WebDriver: Interface used by Selenium to automate web browsers.
+* ChromeDriver: WebDriver implementation used for automating Google Chrome.
