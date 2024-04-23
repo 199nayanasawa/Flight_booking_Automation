@@ -17,7 +17,7 @@ The Flight Booking Automation project aims to automate the process of booking fl
 1. Clone the repository:
    git clone https://github.com/your_username/flight-booking-automation.git
 
-2.Navigate to the project directory:
+2. Navigate to the project directry:
   cd flight-booking-automation
 
 3. Install dependencies:
