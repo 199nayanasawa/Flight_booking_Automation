@@ -5,6 +5,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
 import time
+import datetime
+
+def is_valid_date(date_string):
+    current_date = datetime.datetime.now().date()
+    input_date = datetime.datetime.strptime(date_string, "%d/%m/%Y").date()
+    return input_date >= current_date
 
 origin = "HYD"
 destination = "BLR"
@@ -25,6 +31,18 @@ phone = "7793992929"
 card1 = "371449635398431"
 c1name = "NAYAN ASAWA"
 cvv = "199"
+
+# Check if the departure date is valid
+if not is_valid_date(date):
+    print("Departure date should not be the past date")
+    exit()
+
+# Check if return date is greater than or equal to departure date
+departure_datetime = datetime.datetime.strptime(date, "%d/%m/%Y")
+return_datetime = datetime.datetime.strptime(return_date, "%d/%m/%Y")
+if return_datetime < departure_datetime:
+    print("Return date must be greater than or equal to departure date")
+    exit()
 
 # Chrome options to disable notifications
 chrome_options = webdriver.ChromeOptions()
